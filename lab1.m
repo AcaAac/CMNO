@@ -35,7 +35,7 @@ disp(O);
 fprintf('O rank: %d\n', rank(O));
 
 disp('');
-disp('--------------4------------');
+disp('-------------4-------------');
 disp(size(D));
 D = zeros(1);
 % D = [0, 0, 0, 0, 0]
@@ -47,7 +47,7 @@ disp('Bode plot is : ');
 bode(sys)
 
 disp('');
-disp('--------------5------------');
+disp('-------------5------------');
 Q2 = C.' * C
 R = 1
 [K1,S,CLP] = lqr(A, B, Q2, R)
@@ -59,6 +59,9 @@ disp(eig_t)
 
 disp(['Real part:' num2str(real(eig_t)')]);
 disp(['Im part:' num2str(imag(eig_t)')]);
+
+disp('');
+disp('-------------6------------');
 
 % Furuta pendulum - State feedback test
 %______________________________________________________________________

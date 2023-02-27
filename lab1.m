@@ -45,13 +45,20 @@ disp('Transfer function is:');
 sys
 disp('Bode plot is : ');
 bode(sys)
+
+disp('');
+disp('--------------5------------');
 Q2 = C.' * C
 R = 1
 [K1,S,CLP] = lqr(A, B, Q2, R)
 
 temp = A - B * K1;
 eig_t = eig(temp);
+disp('Eigenvalues:');
 disp(eig_t)
+
+disp(['Real part:' num2str(real(eig_t)')]);
+disp(['Im part:' num2str(imag(eig_t)')]);
 
 % Furuta pendulum - State feedback test
 %______________________________________________________________________

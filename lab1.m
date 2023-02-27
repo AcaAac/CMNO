@@ -52,6 +52,9 @@ Q2 = C.' * C
 R = 1
 [K1,S,CLP] = lqr(A, B, Q2, R)
 
+disp('Vector of gains:');
+disp(K1);
+
 temp = A - B * K1;
 eig_t = eig(temp);
 disp('Eigenvalues:');

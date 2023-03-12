@@ -15,6 +15,7 @@ disp('--------2--------');
 Contr = ctrb(A, B);
 disp('Controllability matrix:');
 disp(Contr);
+% F = A*B;
 fprintf('C rank: %d\n', rank(Contr));
 
 disp(' ');

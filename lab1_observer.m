@@ -20,7 +20,8 @@ A_obs = A - B*K - L*C;
 B_obs = L;
 C_obs = -K;
 D_obs = [0 0];
-
+disp('Observer poles are : ')
+disp(eig(A - L * C))
 %------------
 x0 = [0.1 0 0 0 0]';
 T = 2; % Time duration of the simulation

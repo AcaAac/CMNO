@@ -33,7 +33,7 @@ C_obs = -K;
 D_obs = [0 0];
 
 %Conds Iniciais
-x0 = [0 0 -0.005 0 0]';
+x0 = [0.1 0 0 0 0]';
 
 figure(1);
 title(['Alfa (ex 6 ou 8: ' num2str(com_observador) ', lqr ou lqe: ' num2str(lqr_ou_lqe) ', Q R G:' num2str(Q_R_G) ')']);
